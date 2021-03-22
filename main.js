@@ -3,9 +3,6 @@ var fs = require("fs");
 var url = require("url");
 var qs = require("querystring");
 
-// TODO: 신기하다.
-// FIXME: 신기하군.
-
 var template = {
   HTML: function (title, list, body, control) {
     return `
@@ -54,7 +51,7 @@ var app = http.createServer(function (request, response) {
         var description = "Hello Node.js";
         var list = template.list(filelist);
 
-        var html = template.HTML(
+        var html = template.HTML(r
           title,
           list,
           `<h2>${title}</h2>${description}`,
